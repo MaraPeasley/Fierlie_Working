@@ -1,0 +1,483 @@
+/*
+
+File Name: style.less
+Date: 05/31/21
+Programmer: Mara Peasley
+
+*/
+/*Black and White variables*/
+/*Color Palette:
+Source = https://coolors.co/palette/22223b-4a4e69-9a8c98-c9ada7-f2e9e4
+(checked for AAA Web Accessibility)
+*/
+/*Parametric mixin for headings */
+/*End parametric mixin for headings*/
+/*50% transparent*/
+/*text underlined and italicized*/
+/*text uppercase and bold*/
+/*image flip*/
+/*invert colors and serif*/
+/*make it pink*/
+/*sepia photo with shadow*/
+/*green border*/
+/*.topBorder() {
+    border-top: double .5em #000000;
+}*/
+/*NOTES:
+ - All comments updated on 02/21/24
+
+*/
+/* MOBILE STYLESHEET */
+#desktopOnly {
+  display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #5B6B50;
+  overflow-x: hidden;
+  padding-top: 1em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.sidenav a {
+  padding: 20px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #F3EDDD;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.button {
+  border: 1px solid #F3EDDD;
+  color: #211A51;
+  background-color: #F3EDDD50;
+  text-align: center;
+  padding: 0.5em 2em;
+  margin: 1em auto;
+  border-radius: 10px;
+  display: block;
+  width: 65%;
+  font-weight: 500;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+}
+.button:visited {
+  color: #211A51;
+}
+.button:hover {
+  background-color: #5B6B50;
+  color: #F3EDDD;
+  border: 1px solid #F3EDDD;
+  transition: 500ms all ease;
+}
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scaleY(-1);
+}
+#background-video video {
+  position: fixed;
+}
+#header {
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: 0.2s;
+}
+header {
+  padding: 1em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  color: #211A51;
+}
+header h2 {
+  font-size: 3em;
+  padding: 0.5em;
+}
+header span {
+  padding-top: 0.5em;
+}
+header ul {
+  border-radius: 10px;
+  padding-top: 0.25em;
+}
+header li {
+  color: #211A51;
+  text-transform: uppercase;
+}
+header li a:hover {
+  text-decoration: underline;
+}
+header li a:visited {
+  color: #F3EDDD;
+}
+main #spacer {
+  background-image: url(../images/bishops_close.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  height: 90vh;
+}
+main div.down-arrow {
+  text-align: center;
+  color: #A1B096;
+  position: absolute;
+  bottom: 10%;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url(../images/vine_top.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main div.down-arrow h2 {
+  color: #211A51;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.35);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+main div.down-arrow span {
+  font-size: 3em;
+  font-weight: 600;
+}
+main section.page-description {
+  padding: 1.5em 1em 3em 1em;
+  color: #211A51;
+  background-color: #A1B096;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  /*img:nth-child(1){
+            border-radius: 88% 68% 73% 68%;
+        }
+        img:nth-child(2){
+            border-radius: 62% 82% 65% 57%;
+        }
+        img:nth-child(3){
+            border-radius: 53% 65% 53% 47%;
+        }*/
+}
+main section.page-description div.plant-separator {
+  padding: 1em 0;
+}
+main section.page-description h2 {
+  padding-bottom: 1em;
+}
+main section.page-description h3 {
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  font-size: 1.25em;
+  padding-bottom: 1em;
+}
+main section.page-description img {
+  border-radius: 15px;
+  padding: 0.5em;
+}
+main section.video-section {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main section.video-section video {
+  width: 300vw;
+  margin-bottom: -1px;
+}
+main section.about-story {
+  padding: 1.5em 1em;
+  color: #211A51;
+  background-color: #A1B096;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+main section.about-story h3 {
+  padding: 1em;
+}
+main section.about-story h4 {
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+main section.about-story h5 {
+  padding-top: 1em;
+  font-weight: 500;
+}
+main section.about-story .button {
+  margin-bottom: 2.5em;
+}
+main section.about-story hr {
+  border-top: 1px solid #F3EDDD;
+  color: #F3EDDD;
+  opacity: 60%;
+}
+main section.about-story span {
+  padding-top: 1em;
+}
+footer {
+  background-color: #5B6B50;
+  color: #F3EDDD;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  padding-top: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+footer .footer-title {
+  margin-bottom: 1em;
+}
+footer .footer-title h2 {
+  font-size: 2em;
+  color: #F3EDDD;
+  padding-left: 0.25em;
+  display: inline-block;
+}
+footer .footer-title img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+footer p {
+  padding: 0.25em;
+}
+footer h5 {
+  color: #F3EDDD;
+  font-size: 1.25em;
+  padding: 1em 0 0.5em 0;
+  text-transform: uppercase;
+}
+footer .button {
+  padding: 0.15em 0;
+  width: 30%;
+  line-height: 0.5em;
+  color: #F3EDDD;
+  opacity: 50%;
+}
+footer .button:hover {
+  opacity: 85%;
+  background-color: #F3EDDD;
+  color: #5B6B50;
+  border: 1px solid #A1B096;
+}
+footer #copy {
+  width: 100%;
+  margin: 2em auto 0 auto;
+  padding: 0.5em 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+footer #copy p {
+  font-size: 0.65em;
+}
+footer #copy span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+}
+/*main,
+header,
+footer,
+nav {
+    padding: 1em;
+}*/
+h1 {
+  color: #211A51;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+}
+h2 {
+  padding: 0.25em;
+  font-size: 1.4em;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+}
+h3 {
+  color: #211A51;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+h4 {
+  color: #211A51;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+}
+h5 {
+  color: #211A51;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+}
+h6 {
+  color: #211A51;
+  font-size: 0.75em;
+  line-height: 0.75em;
+}
+p {
+  font-size: 0.8em;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: #F3EDDD;
+}
+body {
+  font-family: "Inria Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  background-color: #A1B096;
+  color: #000000;
+}
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+@media only screen and (min-width: 481px) {
+  .button {
+    padding: 0.25em 2em;
+  }
+  main div.down-arrow {
+    background-position: top;
+  }
+  main div.down-arrow h2 {
+    width: 60%;
+  }
+  main section.page-description p {
+    margin: 0 auto;
+    width: 75%;
+  }
+  main section.page-description .section {
+    margin: 0 auto;
+    width: 90%;
+  }
+  main section.video-section video {
+    width: 200vw;
+    margin-bottom: -1px;
+  }
+  main section.about-story .section {
+    margin: 0 auto;
+    width: 90%;
+  }
+  main section.about-story p {
+    padding: 0 0.5em;
+  }
+  main section.about-story .button {
+    margin-top: 2.5em;
+    width: 40%;
+  }
+  main section.about-story hr {
+    width: 75%;
+  }
+  footer .section {
+    padding: 0 2em 0 1em;
+  }
+  footer h5 {
+    padding-top: 0;
+    font-size: 0.85em;
+  }
+  body {
+    font-size: 24px;
+  }
+}
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+@media only screen and (min-width: 1025px) {
+  #desktopOnly {
+    display: block;
+  }
+  header span {
+    display: none;
+  }
+  header ul {
+    display: inline-block;
+    margin-top: 2.5em;
+    margin-right: 2em;
+  }
+  header li {
+    float: left;
+    padding: 0 0.75em;
+  }
+  main div.down-arrow h2 {
+    font-size: 1.75em;
+    width: 45%;
+  }
+  main section.page-description {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  main section.page-description .section {
+    width: 75%;
+  }
+  main section.page-description p {
+    width: 55%;
+  }
+  main section.video-section video {
+    width: 100vw;
+  }
+  main section.about-story {
+    background-image: url(../images/vine_background.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  main section.about-story .section {
+    width: 70%;
+  }
+  main section.about-story .button {
+    width: 25%;
+  }
+  footer .button {
+    width: 20%;
+  }
+  body {
+    font-size: 20px;
+  }
+}
+/*
+
+TV STYLESHEET
+
+The following CSS affects all screen sizes larger than 1385 pixels wide.
+
+*/

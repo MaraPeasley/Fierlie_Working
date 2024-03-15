@@ -1,0 +1,84 @@
+// out: null
+
+/*Parametric mixin for headings */
+
+.headingStyle(@paramColor; @paramSize) {
+    color: @paramColor;
+    font-size: @paramSize;
+    //font-weight: bold;
+    line-height: @paramSize;
+    //margin-top: @paramSize / 3;
+    //margin-bottom: @paramSize / 5;
+    //text-transform: uppercase;
+}
+
+/*End parametric mixin for headings*/
+.expand() {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/*50% transparent*/
+.semiTransparent() {
+    opacity: 50%;
+}
+
+/*text underlined and italicized*/
+.emphasize() {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/*text uppercase and bold*/
+.capitalBold() {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*image flip*/
+.flipHorizontal() {
+    transform: scaleX(-1);
+}
+
+/*invert colors and serif*/
+.invertColorSerif() {
+    filter: invert(1);
+    font-family: serif;
+}
+
+/*make it pink*/
+.valentinesColor() {
+    color: #ffe6f2;
+    background-color: #cc0066;
+    font-family: cursive;
+}
+
+/*sepia photo with shadow*/
+.sepiaSubtle() {
+    filter: sepia(.5);
+}
+
+/*green border*/
+/*.topBorder() {
+    border-top: double .5em #000000;
+}*/
+
+.topBorder(@paramBorderType: solid; @paramBorderSize: .25em; @paramBorderColor: #000000) {
+    border-top: @paramBorderType @paramBorderSize @paramBorderColor;
+}
+
+.roundedBorderColor(@paramBorderRad: 25px; @paramBackColor: #FFF) {
+    border-radius: @paramBorderRad;
+    background-color: @paramBackColor;
+}
+
+.dropShadow(@paramXShadow: 5px; @paramYShadow: 5px; @paramBlurShadow: 5px; @paramColorShadow: #4d806e) {
+    box-shadow: @paramXShadow @paramYShadow @paramBlurShadow @paramColorShadow;
+}
+
+.gradientLinearBack(@paramDirectionGrad: right; @paramTopColor: #D5E6E0; @paramBottomColor: #FFF) {
+    background: @paramTopColor;
+    background: -o-linear-gradient(@paramDirectionGrad, @paramTopColor, @paramBottomColor);
+    background: -moz-linear-gradient(@paramDirectionGrad, @paramTopColor, @paramBottomColor);
+    background: linear-gradient(to @paramDirectionGrad, @paramTopColor, @paramBottomColor);
+}

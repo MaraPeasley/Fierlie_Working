@@ -1,0 +1,543 @@
+/*
+
+File Name: style.less
+Date: 05/31/21
+Programmer: Mara Peasley
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/*NOTES:
+ - All comments updated on 02/21/24
+
+*/
+
+/* MOBILE STYLESHEET */
+
+#desktopOnly{
+    display: none;
+}
+
+.sidenav {
+    height: 100%; // 100% Full-height 
+    width: 0; // 0 width - change this with JavaScript 
+    position: fixed; // Stay in place 
+    z-index: 1; // Stay on top 
+    top: 0; // Stay at the top 
+    //left: 0;
+    right: 0;
+    background-color: @color4;
+    overflow-x: hidden; // Disable horizontal scroll 
+    padding-top: 1em; // Place content 60px from the top 
+    transition: 0.5s; // 0.5 second transition effect to slide in the sidenav 
+    z-index: 10;
+}
+
+// The navigation menu links 
+.sidenav a {
+    padding: 20px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1em;
+    color: @color1;
+    display: block;
+    transition: 0.3s;
+}
+
+// When you mouse over the navigation links, change their color
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+// Position and style the close button (top right corner)
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.button{
+    border: 1px solid @color1;
+    color: @color5;
+    background-color: #F3EDDD50;
+    text-align: center;
+    padding: .5em 2em;
+    margin: 1em auto;
+    border-radius: 10px;
+    display: block;
+    width: 65%;
+    font-weight: 500;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+.button:visited{
+    color: @color5;
+}
+.button:hover{
+    background-color: @color4;
+    color: @color1;
+    border: 1px solid @color1;
+    transition: 500ms all ease;
+}
+
+#background-video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleY(-1);
+    video{
+        position: fixed;
+    }
+}
+#header{
+    background-color: rgba(255, 255, 255, .25); // Grey background
+    transition: 0.2s; // Add a transition effect (when scrolling - and font size is decreased)
+}
+
+header { 
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    color: @color5;
+    h2{
+        font-size: 3em;
+        padding: .5em;
+    }
+    span{
+        padding-top: .5em;
+    }
+    ul{
+        border-radius: 10px;
+        padding-top: .25em;
+    }
+    li{
+        color: @color5;
+        text-transform: uppercase;
+        a:hover{
+            text-decoration: underline;
+        }
+        a:visited{
+            color: @color1;
+        }
+    }
+}
+
+main {
+    #spacer{
+        background-image: url(../images/bishops_close.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+        height: 90vh;
+    }
+    div.down-arrow{
+        text-align: center;
+        color: @color3;
+        position: absolute;
+        bottom: 10%;
+        margin: 0 auto;
+        width: 100%;
+        background-image: url(../images/vine_top.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        h2{
+            color: @color5;
+            font-weight: 500;
+            //background-color: rgba(255, 247, 221, .5);
+            background-color: rgba(255, 255, 255, .35);
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+        span{
+            font-size: 3em;
+            font-weight: 600;
+        }
+    }
+    section.page-description{
+        padding: 1.5em 1em 3em 1em;
+        color: @color5;
+        background-color: @color3;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        div.plant-separator{
+            padding: 1em 0;
+        }
+        h2{
+            padding-bottom: 1em;
+        }
+        h3{
+            font-family: 'Alegreya', serif;
+            font-style: italic;
+            font-size: 1.25em;
+            padding-bottom: 1em;
+        }
+        img{
+            border-radius: 15px;
+            padding: .5em;
+        }
+        /*img:nth-child(1){
+            border-radius: 88% 68% 73% 68%;
+        }
+        img:nth-child(2){
+            border-radius: 62% 82% 65% 57%;
+        }
+        img:nth-child(3){
+            border-radius: 53% 65% 53% 47%;
+        }*/
+    }
+    section.video-section{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        video{
+            width: 300vw;
+            margin-bottom: -1px;
+        }
+    }
+    section.about-story{
+        padding: 1.5em 1em;
+        color: @color5;
+        background-color: @color3;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        h3{
+            padding: 1em;
+        }
+        h4{
+            padding: 1em;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        h5{
+            padding-top: 1em;
+            font-weight: 500;
+        }
+        .button{
+            margin-bottom: 2.5em;
+        }
+        hr{
+            border-top: 1px solid @color1;
+            color: @color1;
+            opacity: 60%;
+        }
+        span{
+            padding-top: 1em;
+        }
+    }
+}
+
+footer {
+    background-color: @color4;
+    color: @color1;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    padding-top: 1em;
+    text-align: center;
+    overflow: hidden;
+    .footer-title{
+        margin-bottom: 1em;
+        h2{
+            font-size: 2em;
+            color: @color1;
+            padding-left: .25em;
+            display: inline-block;
+        }
+        img{
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+    p{
+        padding: .25em;
+    }
+    h5{
+        color: @color1;
+        font-size: 1.25em;
+        padding: 1em 0 .5em 0;
+        text-transform: uppercase;
+    }
+    .button{
+        padding: .15em 0;
+        width: 30%;
+        line-height: .5em;
+        color: @color1;
+        opacity: 50%;
+    }
+    .button:hover{
+        opacity: 85%;
+        background-color: @color1;
+        color: @color4;
+        border: 1px solid @color3;
+    }
+    #copy{
+        width: 100%;
+        margin: 2em auto 0 auto;
+        padding: .5em 0;
+        background-color: rgba(0, 0, 0, .25);
+        p{
+            font-size: .65em;
+        }
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1em;
+        }
+    }
+}
+
+//DETERMINES SIZING FOR ALL HEADINGS FOR THE PAGE BY EM
+/*main,
+header,
+footer,
+nav {
+    padding: 1em;
+}*/
+
+h1 {
+    //makes all H1 elements - black text with nearly twice the 18px font size
+    .headingStyle(@color5; 1.8em);
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+
+h2 {
+    //makes all H2 elements - black text slightly smaller than 18px font size
+    padding: .25em;
+    font-size: 1.4em;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+
+h3 {
+    //makes all H3 elements - black text with slightly larger than 18px font size
+    .headingStyle(@color5; 1.3em);
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+h4 {
+    //makes all H4 elements - black text with slightly smaller than 18px font size
+    .headingStyle(@color5; 1.1em);
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+
+h5 {
+    //makes all H5 elements - black text with slightly smaller than 18px font size
+    .headingStyle(@color5; 1.1em);
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+
+h6 {
+    //makes all H6 elements - black text with 3/4th times smaller than 18px font size
+    .headingStyle(@color5; .75em);
+}
+
+p {
+    font-size: .8em;
+}
+
+a {
+    &:link {
+        //makes all link/buttons have black text
+        //color: @darkColor;
+        text-decoration: none;
+    }
+    &:visited{
+        color: @color1;
+    }
+}
+
+body {
+    //sets all font for page as Ubuntu - a simple slightly wide sans-serif font
+    font-family: "Inria Sans", sans-serif;
+    //sets all 1em sizes to 18px
+    font-size: 18px;
+    //adds a little breathing room between lines
+    line-height: 1.5em;
+    //sets background of whole page to light blue
+    background-color: @color3;
+    //sets all text color to black
+    color: @darkColor;
+}
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+
+    .button{
+        padding: .25em 2em;
+    }
+    main {
+        div.down-arrow{
+            background-position: top;
+            h2{
+                width: 60%;
+            }
+        }
+        section.page-description{
+            p{
+                margin: 0 auto;
+                width: 75%;
+            }
+            .section{
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+        section.video-section{
+            video{
+                width: 200vw;
+                margin-bottom: -1px;
+            }
+        }
+        section.about-story{
+            .section{
+                margin: 0 auto;
+                width: 90%;
+            }
+            p{
+                padding: 0 .5em;
+            }
+            .button{
+                margin-top: 2.5em;
+                width: 40%;
+            }
+            hr{
+                width: 75%;
+            }
+        }
+    }
+    
+    footer {
+        .section{
+            padding: 0 2em 0 1em;
+        }
+        h5{
+            padding-top: 0;
+            font-size: .85em;
+        }
+    }
+
+    body {
+        //changes 1em from 18px in mobile to 24px
+        font-size: 24px;
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+
+    #desktopOnly{
+        display: block;
+    }
+    
+    header{
+        span{
+            display: none;
+        }
+        ul{
+            display: inline-block;
+            margin-top: 2.5em;
+            margin-right: 2em;
+        }
+        li{
+            float: left;
+            padding: 0 .75em;
+        }
+    }
+
+    main{
+        div.down-arrow{
+            h2{
+                font-size: 1.75em;
+                width: 45%;
+            }
+        }
+        
+        section.page-description{
+            //background-image: url(../images/illustrated_border.png);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            .section{
+                width: 75%;
+            }
+            p{
+                width: 55%;
+            }
+        }
+        section.video-section{
+            video{
+                width: 100vw;
+            }
+        }
+        section.about-story{
+            background-image: url(../images/vine_background.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            .section{
+                width: 70%;
+            }
+            .button{
+                width: 25%;
+            }
+        }
+    }
+
+    footer{
+        .button{
+            width: 20%;
+        }
+    }
+
+    body{
+        font-size: 20px;
+    }
+}
+
+/*
+
+TV STYLESHEET
+
+The following CSS affects all screen sizes larger than 1385 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1385px) {
+
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- 
+NOTES:
+
+4/28/23
+Lots of changes made since creation
+See style.less for full list of notes and To Dos
+
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="mara peasley">
+    
+    <title>Fierlie</title>
+    
+    <!-- Alegreya font connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Inria Sans font connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- ??? material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Hamburger Menu material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Up Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Up Down material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--  Right Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--  Left Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Plant Sprout material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Copyright material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Below are the 4 stylesheets needed to run this website:
+- reset.css clears all formatting for all default css on the site
+- helper.css adds some basic formatting and functionality back
+- grid.css is not currently being used but may be needed if you want to add charts/grids in the future
+- style.css is the output of LESS from the style.less sheet used to format and style the entire site
+- -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/helper.css" rel="stylesheet" type="text/css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+    
+<body>
+    <!-- <video id="background-video" autoplay loop muted poster="images/flowers_topdown.png">
+        <source src="images/bouquet_2_topdown.mp4" type="video/mp4">
+    </video> -->
+    <header id="header">
+        <h2 id="headerTitle">Fierlie</h2>
+        <span style="font-size:30px; cursor:pointer;" onclick="openNav()">&#9776;</span>
+        <ul id="desktopOnly">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Work</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <div class="down-arrow">
+            <span class="material-symbols-outlined">
+                keyboard_arrow_down
+            </span>
+        </div>
+        <div id="spacer"></div>
+
+        <section class="page-description">
+            <h2>Fierlie</h2>
+            <p>“genius loci” or “spirit of the place.
+                Conceived in a climate of possibility,
+                born from rain & sun, rooted in the soil
+                of our home region.
+            </p>
+            <br>
+            <p>We are a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists. Enthusiasts are introduced to an array of transcendent flavor experiences through guided tastings and collaborations. Bringing forth discoveries to the kitchen table of local olive oils, botanically infused syrups, small batch spoon sweets, and wildcrafted teas. Each product will be specially selected and available for purchase individually, or in whimsical gift arrangements.
+            </p>
+            <div class="plant-separator">
+                <span class="material-symbols-outlined">psychiatry
+                </span>
+                <span class="material-symbols-outlined">psychiatry
+                </span>
+                <span class="material-symbols-outlined">psychiatry
+                </span>
+            </div>
+            <h3>Stories that go past the surface.</h3>
+
+        </section>
+
+        <section class="video-section">
+            <video autoplay loop muted poster="images/pottery_topdown.png">
+                <source src="images/pottery_topdown.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section class="about-story">
+            <h3>We're here to join the community with craftsman.</h3>
+            
+            <div class="section group">
+                <div class="col span_6_of_12">
+                    <h4>Where we started...</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur. Orci ullamcorper donec sem a consequat vestibulum. Purus velit lorem massa elit interdum non. Amet sed eros ridiculus rhoncus euismod lobortis. Amet pellentesque volutpat sagittis urna non lobortis fusce. Nulla pulvinar sem diam dignissim lectus viverra elementum in mattis. Turpis lectus aliquet sociis dictumst turpis hac nec morbi feugiat
+                    <br><br>
+                    Et integer varius arcu massa ac. Cras sit pellentesque ut vitae suspendisse vitae. Egestas nunc at facilisis gravida commodo aliquet morbi at fames.
+                    </p>
+                </div>
+
+                <div class="col span_6_of_12">
+                    <h4>Where we're going...</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur. Orci ullamcorper donec sem a consequat vestibulum. Purus velit lorem massa elit interdum non. Amet sed eros ridiculus rhoncus euismod lobortis. Amet pellentesque volutpat sagittis urna non lobortis fusce. Nulla pulvinar sem diam dignissim lectus viverra elementum in mattis. Turpis lectus aliquet sociis dictumst turpis hac nec morbi feugiat
+                    <br><br>
+                    Et integer varius arcu massa ac. Cras sit pellentesque ut vitae suspendisse vitae. Egestas nunc at facilisis gravida commodo aliquet morbi at fames.
+                    </p>
+                </div>
+            </div>
+
+            <a class="button" href="#">more about us</a>
+
+            <hr>
+            <hr style="width: 60%;">
+
+            <h5>We're excited to see you there.</h5>
+            <span class="material-symbols-outlined">psychiatry
+            </span>
+        </section>
+    </main>
+
+    <footer>
+        <div class="section group">
+            <div class="col span_4_of_12 footer-title">
+                <img src="images/logo.png">
+                <h2>Fierlie</h2>
+            </div>
+            <div class="col span_4_of_12">
+                <p>
+                    3306 SE Lake Rd, <br>
+                    Milwaukie, OR 97222
+                </p>
+                <p>
+                    555.555.5555
+                </p>
+                <p>
+                    gwenn@fierlie.com
+                </p>
+            </div>
+            <div class="col span_4_of_12">
+                <h5>Hours of Operation</h5>
+                <p>Monday - Friday: <br>
+                    9:00am - 5:00pm</p>
+                <p>*hours are subject to change</p>
+            </div>
+        </div>
+        <a class="button" href="#">
+            <span class="material-symbols-outlined">
+            keyboard_arrow_up
+            </span>
+        </a>
+        <p id="copy"><span class="material-symbols-outlined">
+            copyright</span> copyright Mara E. D. Peasley</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="scripts/slidenav.js"></script>
+    <script src="scripts/easereveal.js"></script>
+    <script src="scripts/droplist.js"></script>
+    <script src="scripts/totopbutton.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/changeheaderonscroll.js"></script>
+
+</body>
+</html>
