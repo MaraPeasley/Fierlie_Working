@@ -56,7 +56,7 @@ See style.less for full list of notes and To Dos
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
     
-<body>
+<body onload="document.getElementById('definition').style.opacity = '1'; document.getElementById('down-arrow').style.opacity = '1';">
     <!-- <video id="background-video" autoplay loop muted poster="images/flowers_topdown.png">
         <source src="images/bouquet_2_topdown.mp4" type="video/mp4">
     </video> -->
@@ -81,32 +81,125 @@ See style.less for full list of notes and To Dos
         <video id="background-video" autoplay loop muted poster="images/flowers_topdown.png">
             <source src="images/bouquet_2_topdown.mp4" type="video/mp4">
         </video>
-        <div class="down-arrow">
+
+        <div id="definition">
+            <h3>genius loci</h3>
+            <h5>"spirit of the place"</h5>
+            <p>
+                Conceived in a climate of <strong>possibility</strong><br>
+                Born from <strong>rain & sun</strong><br>
+                Rooted in the soil of our <strong>home</strong> region.
+            </p>
+        </div>
+
+        <div id="down-arrow">
             <span class="material-symbols-outlined">
                 keyboard_arrow_down
             </span>
         </div>
+
+        <div class="down-leaves">
+            <img src="images/vine_top.png">
+        </div>
+
         <div id="spacer"></div>
 
         <section class="page-description">
-            <h2>Fierlie</h2>
-            <p>“genius loci” or “spirit of the place.
-                Conceived in a climate of possibility,
-                born from rain & sun, rooted in the soil
-                of our home region.
+            <h2 class="reveal">We are a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists.</h2>
+
+            <p class="reveal">Enthusiasts are introduced to an array of transcendent flavor experiences through guided tastings and collaborations. Bringing forth discoveries to the kitchen table of local olive oils, botanically infused syrups, small batch spoon sweets, and wildcrafted teas. Each product will be specially selected and available for purchase individually, or in whimsical gift arrangements.
             </p>
-            <br>
-            <p>We are a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists. Enthusiasts are introduced to an array of transcendent flavor experiences through guided tastings and collaborations. Bringing forth discoveries to the kitchen table of local olive oils, botanically infused syrups, small batch spoon sweets, and wildcrafted teas. Each product will be specially selected and available for purchase individually, or in whimsical gift arrangements.
-            </p>
-            <div class="plant-separator">
-                <span class="material-symbols-outlined">psychiatry
+            <div class="plant-separator reveal">
+                <span class="material-symbols-outlined">
+                    psychiatry
                 </span>
-                <span class="material-symbols-outlined">psychiatry
+                <span class="material-symbols-outlined">
+                    psychiatry
                 </span>
-                <span class="material-symbols-outlined">psychiatry
+                <span class="material-symbols-outlined">
+                    psychiatry
                 </span>
             </div>
+        </section>
 
+        <section class="product-box">
+            <h3 class="reveal">Our Featured Products:</h3>
+            <!-- <div id="wild-coast" class="reveal">
+                <h4><a href="https://wildcoastbrew.com/">Wild Coast Brew</a></h4>
+                <p>Southern Oregon wildcrafted and cultivated tea blends.</p>
+            </div>
+            <div id="meadowland" class="reveal">
+                <h4><a href="https://www.meadowlandsyrup.com/">Meadowland Syrups</a></h4>
+                <p>Central Oregon infused botanical syrups for cocktails and coffee.</p>
+            </div>
+            <div id="durant" class="reveal">
+                <h4><a href="https://durantoregon.com/">Durant Olive Mill</a></h4>
+                <p>Yamhill County grown and milled, single varietal and fused, extra virgin olive oils.</p>
+            </div>
+            <div id="romance-jam" class="reveal">
+                <h4><a href="https://carolynsjamsession.ueniweb.com/?utm_campaign=gmb">Romancing the Jam</a></h4>
+                <p>Benton County grown fruit and berries in small batches.</p>
+            </div>
+            <div id="bird-mafia" class="reveal">
+                <h4><a href="https://www.birdmafia.com/">Bird Mafia</a></h4>
+                <p>Portland artist creates papercut design prints on flour sack towels, vinyl stickers and canvas totes.</p>
+            </div>
+            <div id="moonbeam" class="reveal">
+                <h4><a>Moonbeam Kitchen</a></h4>
+                <p>Handmade in Albany in lovely fabrics as microwave cozies, casserole and loaf totes.</p>
+            </div> -->
+
+            <dl>
+                <dt id="wild-coast" class="reveal">
+                    <h4><a href="https://wildcoastbrew.com/">Wild Coast Brew</a></h4>
+                    <p>Southern Oregon wildcrafted and cultivated tea blends.</p>
+                 </dt>
+                    <dd>
+                        <p>The unique teas at Wild Coast Brew are created with those primordial stories in mind. Each artisan small-batch tea blend celebrates an archetype, passed down through story and shared imagination, with an offering of befitting herbs, fungi, and spices. Alchemy in a cup.</p>
+                        <img src="https://wildcoastbrew.com/cdn/shop/files/other_logo_idea_1100x.png?v=1704232952" style="width: 55%;">
+                    </dd>
+            
+                <dt id="meadowland" class="reveal">
+                    <h4><a href="https://www.meadowlandsyrup.com/">Meadowland Syrups</a></h4>
+                    <p>Central Oregon infused botanical syrups for cocktails and coffee.</p>
+                 </dt>
+                    <dd>
+                        <p>Meadowland is a collaboration between Katie and Kathy, based out of Bend, Oregon. Both work together to develop unique and delicious flavors that are deeply inspired by Katie's rural upbringing on the prairie. They hope their simple syrups conjure feelings of joy, wonder, and warm memories of summers past.</p>
+                        <img src="https://www.meadowlandsyrup.com/uploads/4/7/9/9/47994269/published/meadowlandlogo.jpg?1486677506">
+                    </dd>
+            
+                <dt id="durant" class="reveal">
+                    <h4><a href="https://durantoregon.com/">Durant Olive Mill</a></h4>
+                    <p>Yamhill County grown and milled, single varietal and fused, extra virgin olive oils.</p>
+                    </dt>
+                    <dd>
+                        <p>For 50 years, our family has grown wine grapes, acting as stewards of the land on this hill we call home. Since then, our vision has grown to include Durant Vineyards Winery & Tasting Room, award-winning Durant Olive Mill extra virgin olive oil, Durant Kitchen, Durant Body Care, Red Ridge Farms Specialty Plant Nursery, Farm Shop, overnight lodging, expansive gardens, and the Durant Nature Trail.</p>
+                        <img src="https://durantoregon.com/wp-content/uploads/2023/02/Durant_50-Year_Logo_final_cream-01-300x268.png">
+                    </dd>
+                <dt id="romance-jam" class="reveal">
+                    <h4><a href="https://carolynsjamsession.ueniweb.com/?utm_campaign=gmb">Romancing the Jam</a></h4>
+                    <p>Benton County grown fruit and berries in small batches.</p>
+                    </dt>
+                    <dd>
+                        <p>A jam supplier and manufacturer for many local businesses in Beaverton and beyond. I provide all sorts of raw ingredients to my clients in their efforts to create the best possible jams for you, whether that’s freshly cooked hot conserves or things for making jam in your own home.</p>
+                        <img src="https://speedy.uenicdn.com/316af3ed-1b89-4640-ba3d-44da93f5493f/c1344_500a/image/upload/v1581825254/business/316af3ed-1b89-4640-ba3d-44da93f5493f/835BBD20-5690-4E45-BEAC-BC9D4E65D316jpeg.jpg">
+                    </dd>
+                <dt id="bird-mafia" class="reveal">
+                    <h4><a href="https://www.birdmafia.com/">Bird Mafia</a></h4>
+                    <p>Portland artist creates papercut design prints on flour sack towels, vinyl stickers and canvas totes.</p>
+                    </dt>
+                    <dd>
+                        <p>BIRD MAFIA is a Portland, Oregon based design company inspired by the intricate and unique papercutting art form. Every Bird Mafia design begins as hand-cut paper before making it's way into our collection. Founded in 2009 amid the handmade revolution in indie craft fairs and the DIY movement, operations began small. Today the Bird Mafia line can be found in stores throughout Portland and the United States.</p>
+                        <img src="https://images.squarespace-cdn.com/content/v1/552be451e4b002ba88486ccb/1592154101338-JGT9RXQBZI1F3Y5NCEP6/BirdMafia_fontlogoOG.jpg?format=1500w">
+                    </dd>
+                <dt id="moonbeam" class="reveal">
+                    <h4><a>Moonbeam Kitchen</a></h4>
+                    <p>Handmade in Albany in lovely fabrics as microwave cozies, casserole and loaf totes.</p>
+                    </dt>
+                    <dd>
+                        <p>Unknown</p>
+                    </dd>
+            </dl>
         </section>
 
         <section class="video-section">
@@ -116,10 +209,15 @@ See style.less for full list of notes and To Dos
         </section>
 
         <section class="about-story">
-            <h3>We're here to join the community with craftsman.</h3>
+            <div class="pottery-definition reveal">
+                <h3>We're here to join our community</h3>
+            </div>
+            <div class="pottery-definition reveal">
+                <h3>with our craftsman.</h3>
+            </div>
             
             <div class="section group">
-                <div class="col span_6_of_12">
+                <div class="col span_6_of_12 reveal">
                     <h4>Where we started...</h4>
                     <p>Lorem ipsum dolor sit amet consectetur. Orci ullamcorper donec sem a consequat vestibulum. Purus velit lorem massa elit interdum non. Amet sed eros ridiculus rhoncus euismod lobortis. Amet pellentesque volutpat sagittis urna non lobortis fusce. Nulla pulvinar sem diam dignissim lectus viverra elementum in mattis. Turpis lectus aliquet sociis dictumst turpis hac nec morbi feugiat
                     <br><br>
@@ -127,7 +225,7 @@ See style.less for full list of notes and To Dos
                     </p>
                 </div>
 
-                <div class="col span_6_of_12">
+                <div class="col span_6_of_12 reveal">
                     <h4>Where we're going...</h4>
                     <p>Lorem ipsum dolor sit amet consectetur. Orci ullamcorper donec sem a consequat vestibulum. Purus velit lorem massa elit interdum non. Amet sed eros ridiculus rhoncus euismod lobortis. Amet pellentesque volutpat sagittis urna non lobortis fusce. Nulla pulvinar sem diam dignissim lectus viverra elementum in mattis. Turpis lectus aliquet sociis dictumst turpis hac nec morbi feugiat
                     <br><br>
@@ -136,14 +234,16 @@ See style.less for full list of notes and To Dos
                 </div>
             </div>
 
-            <a class="button" href="#">more about us</a>
+            <a class="button reveal" href="#">more about us</a>
 
             <hr>
             <hr style="width: 60%;">
-
-            <h5>We're excited to see you there.</h5>
-            <span class="material-symbols-outlined">psychiatry
-            </span>
+            
+            <div class="reveal">
+                <h5>We're excited to see you there.</h5>
+                <span class="material-symbols-outlined">psychiatry
+                </span>
+            </div>
         </section>
     </main>
 

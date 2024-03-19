@@ -19,7 +19,7 @@ id="header"
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById("header").style.backgroundColor = "#5B6B50";
     document.getElementById("header").style.color = "#F3EDDD";
     document.getElementById("header").style.padding = "0 1.5em";
