@@ -22,6 +22,11 @@ See style.less for full list of notes and To Dos
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
+    <!-- Sorts Mill Goudy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
     <!-- Inria Sans font connect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,24 +66,20 @@ See style.less for full list of notes and To Dos
         <source src="images/bouquet_2_topdown.mp4" type="video/mp4">
     </video> -->
     <header id="header">
-        <h2 id="headerTitle">Fierlie</h2>
+        <h2><a href="index.html" id="headerTitle">Fierlie</a></h2>
         <span style="font-size:30px; cursor:pointer;" onclick="openNav()">&#9776;</span>
         <ul id="desktopOnly">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
 
     <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Work</a>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
-        <video id="background-video" autoplay loop muted poster="images/flowers_topdown.png">
+        <video id="background-video" autoplay loop muted poster="images/bouquet_2_topdown.png">
             <source src="images/bouquet_2_topdown.mp4" type="video/mp4">
         </video>
 
@@ -105,7 +106,7 @@ See style.less for full list of notes and To Dos
         <div id="spacer"></div>
 
         <section class="page-description">
-            <h2 class="reveal">We are a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists.</h2>
+            <h2 class="reveal">Fierlie is a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists.</h2>
 
             <p class="reveal">Enthusiasts are introduced to an array of transcendent flavor experiences through guided tastings and collaborations. Bringing forth discoveries to the kitchen table of local olive oils, botanically infused syrups, small batch spoon sweets, and wildcrafted teas. Each product will be specially selected and available for purchase individually, or in whimsical gift arrangements.
             </p>
@@ -197,7 +198,6 @@ See style.less for full list of notes and To Dos
                     <p>Handmade in Albany in lovely fabrics as microwave cozies, casserole and loaf totes.</p>
                     </dt>
                     <dd>
-                        <p>Unknown</p>
                     </dd>
             </dl>
         </section>
@@ -287,7 +287,6 @@ See style.less for full list of notes and To Dos
     <script src="scripts/easereveal.js"></script>
     <script src="scripts/droplist.js"></script>
     <script src="scripts/totopbutton.js"></script>
-    <script src="scripts/slideshow.js"></script>
     <script src="scripts/changeheaderonscroll.js"></script>
 
 </body>

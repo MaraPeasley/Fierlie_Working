@@ -83,7 +83,7 @@ Source = https://coolors.co/palette/22223b-4a4e69-9a8c98-c9ada7-f2e9e4
   display: block;
   width: 65%;
   font-weight: 500;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
 }
 .button:visited {
@@ -114,6 +114,35 @@ Source = https://coolors.co/palette/22223b-4a4e69-9a8c98-c9ada7-f2e9e4
   background-color: rgba(255, 255, 255, 0.5);
   transition: 0.2s;
 }
+#headerTitle {
+  color: #211A51;
+}
+#green-header {
+  background-color: #5B6B50;
+  color: #F3EDDD;
+  padding: 0 1.5em;
+}
+#green-header h2 {
+  font-size: 2em;
+}
+#green-header ul#desktopOnly {
+  margin-top: 1em;
+  padding: 0 1em;
+}
+#background-video-contact {
+  width: 100vw;
+  height: 55vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#background-video-contact video {
+  position: fixed;
+}
 header {
   padding: 1em 1.5em;
   display: flex;
@@ -136,7 +165,7 @@ header ul {
   padding-top: 0.25em;
 }
 header li {
-  color: #211A51;
+  color: #F3EDDD;
   text-transform: uppercase;
 }
 header li a:hover {
@@ -229,7 +258,7 @@ main section.page-description p {
   margin: 0 auto;
 }
 main section.page-description h3 {
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
   font-size: 1.25em;
   padding-bottom: 1em;
@@ -243,7 +272,7 @@ main section.product-box {
   background-color: #F3EDDD;
 }
 main section.product-box h3 {
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
   font-size: 1.25em;
   padding-left: 1em;
@@ -374,10 +403,192 @@ main section.about-story div.pottery-definition:nth-child(2) {
   top: -15%;
   left: 25%;
 }
+main section.contact-top {
+  padding: 2em 1.5em 1em 1.5em;
+  color: #211A51;
+  background-color: #A1B096;
+  text-align: center;
+  width: 100%;
+  margin: 60% auto 0 auto;
+  border-radius: 100% 100% 0 0;
+}
+main section.contact-top h2 {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  font-weight: 500;
+}
+main section.contact-top hr {
+  color: #F3EDDD;
+  border-top: 1px solid #F3EDDD;
+}
+main section.contact-form {
+  overflow: hidden;
+  background-color: #A1B096;
+  padding-bottom: 5em;
+  /*.fcf-btn:hover {
+            color: #212529;
+            text-decoration: none;
+        }
+        
+        .fcf-btn:focus, .fcf-btn.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        
+        .fcf-btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .fcf-btn-primary:hover {
+            color: #fff;
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        
+        .fcf-btn-primary:focus, .fcf-btn-primary.focus {
+            color: #fff;
+            background-color: #0069d9;
+            border-color: #0062cc;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
+        
+        .fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+        }
+        
+        .fcf-btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .fcf-btn-block+.fcf-btn-block {
+            margin-top: 0.5rem;
+        }*/
+}
+main section.contact-form .google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+main section.contact-form .google-map iframe {
+  height: 100%;
+  width: 98%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  position: absolute;
+  padding: 0.25em 0;
+  border-radius: 10px;
+}
+main section.contact-form #fcf-form {
+  display: block;
+}
+main section.contact-form .fcf-body {
+  margin: 0;
+  color: #211A51;
+  text-align: left;
+  padding: 1em 2em;
+  border-radius: 0.25rem;
+  max-width: 100%;
+}
+main section.contact-form .fcf-form-group {
+  margin-bottom: 1rem;
+}
+main section.contact-form .fcf-input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+main section.contact-form .fcf-form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+main section.contact-form .fcf-form-control:focus {
+  border: 1px solid #313131;
+}
+main section.contact-form select.fcf-form-control[size],
+main section.contact-form select.fcf-form-control[multiple] {
+  height: auto;
+}
+main section.contact-form textarea.fcf-form-control {
+  font-family: -apple-system, Arial, sans-serif;
+  height: auto;
+}
+main section.contact-form label.fcf-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+main section.contact-form .fcf-credit {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #545b62;
+  opacity: 50%;
+}
+main section.contact-form .fcf-credit a {
+  color: #545b62;
+  text-decoration: underline;
+}
+main section.contact-form .fcf-credit a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+main section.contact-form .fcf-btn {
+  color: #F3EDDD;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Inria Sans', sans serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+main section.contact-form .button {
+  width: 75%;
+  background-color: #5B6B50;
+  border: 1px solid #8ea081;
+}
+@media (prefers-reduced-motion: reduce) {
+  main section.contact-form .fcf-btn {
+    transition: none;
+  }
+}
+main section.contact-form input[type="submit"].fcf-btn-block,
+main section.contact-form input[type="reset"].fcf-btn-block,
+main section.contact-form input[type="button"].fcf-btn-block {
+  width: 100%;
+}
 footer {
   background-color: #5B6B50;
   color: #F3EDDD;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
   padding-top: 1em;
   text-align: center;
@@ -460,20 +671,20 @@ h1 {
   color: #211A51;
   font-size: 1.8em;
   line-height: 1.8em;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
 }
 h2 {
   padding: 0.25em;
   font-size: 1.4em;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
 }
 h3 {
   color: #211A51;
   font-size: 1.3em;
   line-height: 1.3em;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
   font-weight: 500;
 }
@@ -481,14 +692,14 @@ h4 {
   color: #211A51;
   font-size: 1.1em;
   line-height: 1.1em;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
 }
 h5 {
   color: #211A51;
   font-size: 1.1em;
   line-height: 1.1em;
-  font-family: 'Alegreya', serif;
+  font-family: 'Sorts Mill Goudy', serif;
   font-style: italic;
 }
 h6 {
@@ -502,9 +713,6 @@ p {
 }
 a:link {
   text-decoration: none;
-}
-a:visited {
-  color: #F3EDDD;
 }
 body {
   font-family: "Inria Sans", sans-serif;
@@ -526,6 +734,12 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
   }
   header span {
     padding-top: 1em;
+  }
+  #green-header span {
+    padding-top: 0.5em;
+  }
+  #background-video-contact {
+    height: 45vh;
   }
   @keyframes gentlebounce {
     0% {
@@ -604,6 +818,16 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
   main section.about-story hr {
     width: 75%;
   }
+  main section.contact-top {
+    margin-top: 35%;
+  }
+  main section.contact-top hr {
+    width: 70%;
+  }
+  main section.contact-form .google-map iframe {
+    margin-left: 1em;
+    height: 85%;
+  }
   footer .section {
     padding: 0 2em 0 1em;
   }
@@ -626,8 +850,8 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
   #desktopOnly {
     display: block;
   }
-  #desktopOnly a {
-    color: #211A51;
+  #background-video-contact {
+    height: 60%;
   }
   header span {
     display: none;
@@ -697,6 +921,10 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
   }
   main section.about-story .button {
     width: 25%;
+  }
+  main section.contact-top {
+    margin-top: 25%;
+    border-radius: 0;
   }
   footer .button {
     width: 20%;

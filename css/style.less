@@ -83,7 +83,7 @@ opacity: 1;
     display: block;
     width: 65%;
     font-weight: 500;
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
 }
 .button:visited{
@@ -115,6 +115,35 @@ opacity: 1;
     background-color: rgba(255, 255, 255, .5); // Grey background
     transition: 0.2s; // Add a transition effect (when scrolling - and font size is decreased)
 }
+#headerTitle{
+    color: @color5;
+}
+#green-header{
+    background-color: @color4;
+    color: @color1;
+    padding: 0 1.5em;
+    h2{
+        font-size: 2em;
+    }
+    ul#desktopOnly{
+        margin-top: 1em;
+        padding: 0 1em;
+    }
+}
+#background-video-contact{
+    width: 100vw;
+    height: 55vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    video{
+        position: fixed;
+    }
+}
 
 header { 
     padding: 1em 1.5em;
@@ -137,7 +166,7 @@ header {
         padding-top: .25em;
     }
     li{
-        color: @color5;
+        color: @color1;
         text-transform: uppercase;
         a:hover{
             text-decoration: underline;
@@ -237,7 +266,7 @@ main {
             margin: 0 auto;
         }
         h3{
-            font-family: 'Alegreya', serif;
+            font-family: 'Sorts Mill Goudy', serif;
             font-style: italic;
             font-size: 1.25em;
             padding-bottom: 1em;
@@ -251,7 +280,7 @@ main {
         padding: 1em 0;
         background-color: @color1;
         h3{
-            font-family: 'Alegreya', serif;
+            font-family: 'Sorts Mill Goudy', serif;
             font-style: italic;
             font-size: 1.25em;
             padding-left: 1em;
@@ -389,12 +418,210 @@ main {
             left: 25%;
         }
     }
+    section.contact-top{
+        padding: 2em 1.5em 1em 1.5em;
+        color: @color5;
+        background-color: @color3;
+        text-align: center;
+        width: 100%;
+        margin: 60% auto 0 auto;
+        border-radius: 100% 100% 0 0;
+        h2{
+            padding: .5em 1em;
+            font-size: 2em;
+            font-weight: 500;
+        }
+        hr{
+            color: @color1;
+            border-top: 1px solid @color1;
+        }
+    }
+    section.contact-form{
+        overflow: hidden;
+        background-color: @color3;
+        padding-bottom: 5em;
+
+        .google-map {
+            padding-bottom: 50%;
+            position: relative;
+        }
+        
+        .google-map iframe {
+            height: 100%;
+            width: 98%;
+            text-align: center;
+            left: 0;
+            top: 0;
+            position: absolute;
+            padding: .25em 0;
+            border-radius: 10px;
+        }
+
+        #fcf-form {
+            display:block;
+        }
+        
+        .fcf-body {
+            margin: 0;
+            color: @color5;
+            text-align: left;
+            padding: 1em 2em;
+            border-radius: 0.25rem;
+            max-width: 100%;
+        }
+        
+        .fcf-form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .fcf-input-group {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            width: 100%;
+        }
+        
+        .fcf-form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            outline: none;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        
+        .fcf-form-control:focus {
+            border: 1px solid #313131;
+        }
+        
+        select.fcf-form-control[size], select.fcf-form-control[multiple] {
+            height: auto;
+        }
+        
+        textarea.fcf-form-control {
+            font-family: -apple-system, Arial, sans-serif;
+            height: auto;
+        }
+        
+        label.fcf-label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .fcf-credit {
+            padding-top: 10px;
+            font-size: 0.9rem;
+            color: #545b62;
+            opacity: 50%;
+        }
+        
+        .fcf-credit a {
+            color: #545b62;
+            text-decoration: underline;
+        }
+        
+        .fcf-credit a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        .fcf-btn {
+            color: @color1;
+            text-align: center;
+            font-size: 1em;
+            font-family: 'Inria Sans', sans serif;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .button{
+            width: 75%;
+            background-color: @color4;
+            border: 1px solid @lightColor4;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .fcf-btn {
+                transition: none;
+            }
+        }
+        
+        /*.fcf-btn:hover {
+            color: #212529;
+            text-decoration: none;
+        }
+        
+        .fcf-btn:focus, .fcf-btn.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        
+        .fcf-btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .fcf-btn-primary:hover {
+            color: #fff;
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        
+        .fcf-btn-primary:focus, .fcf-btn-primary.focus {
+            color: #fff;
+            background-color: #0069d9;
+            border-color: #0062cc;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
+        
+        .fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+        }
+        
+        .fcf-btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .fcf-btn-block+.fcf-btn-block {
+            margin-top: 0.5rem;
+        }*/
+        
+        input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+            width: 100%;
+        }
+    }
 }
 
 footer {
     background-color: @color4;
     color: @color1;
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
     padding-top: 1em;
     text-align: center;
@@ -474,7 +701,7 @@ nav {
 h1 {
     //makes all H1 elements - black text with nearly twice the 18px font size
     .headingStyle(@color5; 1.8em);
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
 }
 
@@ -482,14 +709,14 @@ h2 {
     //makes all H2 elements - black text slightly smaller than 18px font size
     padding: .25em;
     font-size: 1.4em;
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
 }
 
 h3 {
     //makes all H3 elements - black text with slightly larger than 18px font size
     .headingStyle(@color5; 1.3em);
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
     font-weight: 500;
 }
@@ -497,14 +724,14 @@ h3 {
 h4 {
     //makes all H4 elements - black text with slightly smaller than 18px font size
     .headingStyle(@color5; 1.1em);
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
 }
 
 h5 {
     //makes all H5 elements - black text with slightly smaller than 18px font size
     .headingStyle(@color5; 1.1em);
-    font-family: 'Alegreya', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-style: italic;
 }
 
@@ -524,9 +751,9 @@ a {
         //color: @darkColor;
         text-decoration: none;
     }
-    &:visited{
-        color: @color1;
-    }
+    //&:visited{
+    //    color: @color1;
+    //}
 }
 
 body {
@@ -559,6 +786,14 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
         span{
             padding-top: 1em;
         }
+    }
+    #green-header{
+        span{
+            padding-top: .5em;
+        }
+    }
+    #background-video-contact{
+        height: 45vh;
     }
     @keyframes gentlebounce {
         0%   {bottom: 40%}
@@ -640,6 +875,18 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
                 width: 75%;
             }
         }
+        section.contact-top{
+            margin-top: 35%;
+            hr{
+                width: 70%;
+            }
+        }
+        section.contact-form{
+            .google-map iframe{
+                margin-left: 1em;
+                height: 85%;
+            }
+        }
     }
     
     footer {
@@ -670,9 +917,9 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
 
     #desktopOnly{
         display: block;
-        a{
-            color: @color5;
-        }
+    }
+    #background-video-contact{
+        height: 60%;
     }
     
     header{
@@ -753,6 +1000,10 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
             .button{
                 width: 25%;
             }
+        }
+        section.contact-top{
+            margin-top: 25%;
+            border-radius: 0;
         }
     }
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- 
+NOTES:
+
+4/28/23
+Lots of changes made since creation
+See style.less for full list of notes and To Dos
+
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="mara peasley">
+    
+    <title>Fierlie</title>
+    
+    <!-- Alegreya font connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Sorts Mill Goudy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Inria Sans font connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- ??? material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Hamburger Menu material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Up Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Up Down material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--  Right Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--  Left Arrow material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Plant Sprout material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Copyright material icons connect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Below are the 4 stylesheets needed to run this website:
+- reset.css clears all formatting for all default css on the site
+- helper.css adds some basic formatting and functionality back
+- grid.css is not currently being used but may be needed if you want to add charts/grids in the future
+- style.css is the output of LESS from the style.less sheet used to format and style the entire site
+- -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/helper.css" rel="stylesheet" type="text/css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+    
+<body>
+    <header id="green-header">
+        <h2><a href="index.html" style="color: #F3EDDD;">Fierlie</a></h2>
+        <span style="font-size:30px; cursor:pointer;" onclick="openNav()">&#9776;</span>
+        <ul id="desktopOnly">
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <video id="background-video-contact" autoplay loop muted poster="images/plant_topdown.png">
+            <source src="images/plant_topdown.mp4" type="video/mp4">
+        </video>
+
+        <section class="contact-top">
+            <h2>Contact Us</h2>
+            <div class="plant-separator">
+                <span class="material-symbols-outlined">
+                    psychiatry
+                </span>
+                <span class="material-symbols-outlined">
+                    psychiatry
+                </span>
+                <span class="material-symbols-outlined">
+                    psychiatry
+                </span>
+                <hr>
+                <hr style="width: 60%;">
+            </div>
+        </section>
+
+        <section class="contact-form section group">
+
+            <div class="col span_6_of_12 google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6854.196164077806!2d-122.63908830165882!3d45.433645873350684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549574e0257fc0cd%3A0x73fcc17ea59ec515!2sMilwaukie%20Floral%20and%20Garden!5e0!3m2!1sen!2sus!4v1710882357677!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="fcf-body col span_6_of_12">
+
+                <div id="fcf-form">
+            
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                    
+                    <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label">Name:</label>
+                        <div class="fcf-input-group">
+                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Email:</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label">Message:</label>
+                        <div class="fcf-input-group">
+                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group button">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                    </div>
+
+                    <div class="fcf-credit" id="fcf-credit">
+                        Email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+                    </div>
+            
+                </form>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- <section class="video-section">
+            <video autoplay loop muted poster="images/plant_topdown.png">
+                <source src="images/plant_topdown.mp4" type="video/mp4">
+            </video>
+        </section>-->
+    </main>
+
+    <footer>
+        <div class="section group">
+            <div class="col span_4_of_12 footer-title">
+                <img src="images/logo.png">
+                <h2>Fierlie</h2>
+            </div>
+            <div class="col span_4_of_12">
+                <p>
+                    3306 SE Lake Rd, <br>
+                    Milwaukie, OR 97222
+                </p>
+                <p>
+                    555.555.5555
+                </p>
+                <p>
+                    gwenn@fierlie.com
+                </p>
+            </div>
+            <div class="col span_4_of_12">
+                <h5>Hours of Operation</h5>
+                <p>Monday - Friday: <br>
+                    9:00am - 5:00pm</p>
+                <p>*hours are subject to change</p>
+            </div>
+        </div>
+        <a class="button" href="#">
+            <span class="material-symbols-outlined">
+            keyboard_arrow_up
+            </span>
+        </a>
+        <p id="copy"><span class="material-symbols-outlined">
+            copyright</span> copyright Mara E. D. Peasley</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="scripts/slidenav.js"></script>
+    <script src="scripts/easereveal.js"></script>
+    <script src="scripts/droplist.js"></script>
+    <script src="scripts/totopbutton.js"></script>
+
+</body>
+</html>
