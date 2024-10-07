@@ -106,7 +106,7 @@ See style.less for full list of notes and To Dos
         <div id="spacer"></div>
 
         <section class="page-description">
-            <h2 class="reveal">Fierlie is a thoughtful collection of edible and practical goods sourced from local growers, creators, and artists.</h2>
+            <h2 class="reveal">Hello You! We strive to feature specialty foods and handcrafted goods to promote an inclusive community of makers.</h2>
 
             <p class="reveal">Enthusiasts are introduced to an array of transcendent flavor experiences through guided tastings and collaborations. Bringing forth discoveries to the kitchen table of local olive oils, botanically infused syrups, small batch spoon sweets, and wildcrafted teas. Each product will be specially selected and available for purchase individually, or in whimsical gift arrangements.
             </p>
@@ -121,6 +121,29 @@ See style.less for full list of notes and To Dos
                     psychiatry
                 </span>
             </div>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container reveal">
+
+                <div class="mySlides fade">
+                  <img src="images/fierlie_stand.jpg" class="fitting-slideshow">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="images/jamsamples.jpg" class="fitting-slideshow">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="images/fiddleheads.jpg" class="fitting-slideshow">
+                </div>
+                
+                </div>
+                
+                <div style="text-align:center" class="reveal">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
         </section>
 
         <section class="product-box">
@@ -183,7 +206,16 @@ See style.less for full list of notes and To Dos
                     </dt>
                     <dd>
                         <p>A jam supplier and manufacturer for many local businesses in Beaverton and beyond. I provide all sorts of raw ingredients to my clients in their efforts to create the best possible jams for you, whether that’s freshly cooked hot conserves or things for making jam in your own home.</p>
-                        <img src="https://speedy.uenicdn.com/316af3ed-1b89-4640-ba3d-44da93f5493f/c1344_500a/image/upload/v1581825254/business/316af3ed-1b89-4640-ba3d-44da93f5493f/835BBD20-5690-4E45-BEAC-BC9D4E65D316jpeg.jpg">
+                        <!--<img src="https://speedy.uenicdn.com/316af3ed-1b89-4640-ba3d-44da93f5493f/c1344_500a/image/upload/v1581825254/business/316af3ed-1b89-4640-ba3d-44da93f5493f/835BBD20-5690-4E45-BEAC-BC9D4E65D316jpeg.jpg">-->
+                        <img src="images/romancingjam_fill.webp">
+                        <div class="section group">
+                            <div class="col span_6_of_12">
+                                <img src="images/romancingjam_pot.jpg" style="width: 90%;">
+                            </div>
+                            <div class="col span_6_of_12">
+                                <img src="images/romancingjam_jars_crop.jpg" style="width: 90%;">
+                            </div>
+                        </div>
                     </dd>
                 <dt id="bird-mafia" class="reveal">
                     <h4><a href="https://www.birdmafia.com/">Bird Mafia</a></h4>
@@ -195,9 +227,11 @@ See style.less for full list of notes and To Dos
                     </dd>
                 <dt id="moonbeam" class="reveal">
                     <h4><a>Moonbeam Kitchen</a></h4>
-                    <p>Handmade in Albany in lovely fabrics as microwave cozies, casserole and loaf totes.</p>
+                    <p>One of a kind market totes, microwave caddies, loaf totes, and casserole carriers. All handmade and local.</p>
                     </dt>
                     <dd>
+                        <p>Moonbeam Kitchen makes one of a kind market totes, microwave caddies, loaf totes, and casserole carriers. All handmade and local.</p>
+                        <img src="images/bags.jpg">  
                     </dd>
             </dl>
         </section>
@@ -219,9 +253,11 @@ See style.less for full list of notes and To Dos
             <div class="section group">
                 <div class="col span_6_of_12 reveal">
                     <h4>Where we started...</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur. Orci ullamcorper donec sem a consequat vestibulum. Purus velit lorem massa elit interdum non. Amet sed eros ridiculus rhoncus euismod lobortis. Amet pellentesque volutpat sagittis urna non lobortis fusce. Nulla pulvinar sem diam dignissim lectus viverra elementum in mattis. Turpis lectus aliquet sociis dictumst turpis hac nec morbi feugiat
+                    <p> I've been in the hospitality and food industry for more than 20 years - my focus has always been on local producers.<br>
+                    When I arrived in the Portland area, there was an immediate attraction to the berry farms and a burgeoning Slow Food movement.<br>
+                    I believe in the enjoyment of jams, olive oils, wildcraft teas, ceramic mugs, and even a handmade farmer's market tote as a form of selfcare and ritual. 
                     <br><br>
-                    Et integer varius arcu massa ac. Cras sit pellentesque ut vitae suspendisse vitae. Egestas nunc at facilisis gravida commodo aliquet morbi at fames.
+                    ~Gwenn
                     </p>
                 </div>
 
@@ -234,7 +270,7 @@ See style.less for full list of notes and To Dos
                 </div>
             </div>
 
-            <a class="button reveal" href="#">more about us</a>
+            <!--<a class="button reveal" href="#">more about us</a> -->
 
             <hr>
             <hr style="width: 60%;">
@@ -283,11 +319,31 @@ See style.less for full list of notes and To Dos
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
-    <script src="scripts/slidenav.js"></script>
     <script src="scripts/easereveal.js"></script>
     <script src="scripts/droplist.js"></script>
     <script src="scripts/totopbutton.js"></script>
     <script src="scripts/changeheaderonscroll.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" showing", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " showing";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
 
 </body>
 </html>
